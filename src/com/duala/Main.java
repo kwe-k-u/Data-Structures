@@ -37,10 +37,16 @@ public class Main {
         singleList.addFirst(12);
         singleList.addFirst(19);
 
+        //Getting the size of the list
+        System.out.println(singleList.getSize());
+
         //Removing elements 3, 12, 5
         singleList.remove(3);
         singleList.remove(12);
         singleList.remove(5);
+
+        //Getting the size of the list
+        System.out.println(singleList.getSize());
 
         //adding elements
         singleList.addFirst(1);
@@ -61,9 +67,18 @@ public class Main {
         for (int i = 0; i <= singleList.getSize(); i++)
             singleList.removeFirst();
 
+
+        //Getting the size of the list
+        System.out.println(singleList.getSize());
+
         //finding first and last element
         singleList.first();
         singleList.last();
+
+
+
+        //Getting the size of the list
+        System.out.println(singleList.getSize());
 
 
     }
