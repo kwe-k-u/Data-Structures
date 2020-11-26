@@ -1,8 +1,9 @@
 package com.duala;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
-public class CircularlyLinkedList{
+public class CircularlyLinkedList<E>{
 
     private  Node head = new  Node();
     private int size = 0;
@@ -21,7 +22,7 @@ public class CircularlyLinkedList{
      * @param data
      * @return newNode
      */
-    public  Node addFirst(int data) {
+    public  Node addFirst(E data) {
          Node newNode = new  Node(data);
         newNode.next = head.next;
         head.next = newNode;
@@ -35,7 +36,7 @@ public class CircularlyLinkedList{
      * @param data
      * @return newNode
      */
-    public  Node addLast(int data){
+    public  Node addLast(E data){
          Node last = last();
          Node newNode = new  Node(data);
         last.setNext( newNode);
@@ -80,7 +81,7 @@ public class CircularlyLinkedList{
         return current;
     }
 
-     Node remove(int data){
+     Node remove(E data){
          Node current = first();
          Node previous = this.head;
 
@@ -106,7 +107,7 @@ public class CircularlyLinkedList{
      * @param data
      * @return Node
      */
-     Node find(int data){
+     Node find(E data){
          Node current = first();
         while (current != null){
             current = current.next;
@@ -143,8 +144,8 @@ public class CircularlyLinkedList{
 
 
 
-    static  class Node{
-        private int data;
+    static  class Node<E>{
+        private E data;
         private  Node next;
 
         Node(){
@@ -152,11 +153,11 @@ public class CircularlyLinkedList{
         }
 
 
-        Node (int data){
+        Node (E data){
             this.data = data;
         }
 
-        public void setData(int data) {
+        public void setData(E data) {
             this.data = data;
         }
 
@@ -164,7 +165,7 @@ public class CircularlyLinkedList{
             this.next = next;
         }
 
-        public int getData() {
+        public E getData() {
             return data;
         }
 

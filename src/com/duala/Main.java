@@ -76,10 +76,70 @@ public class Main {
         singleList.last();
 
 
-
         //Getting the size of the list
         System.out.println(singleList.getSize());
 
+
+
+
+
+
+
+
+
+        //Testing circularlyLinkedList
+        CircularlyLinkedList circleList = new <Integer>CircularlyLinkedList();
+
+        //Creating a full list
+        circleList.addFirst(2);
+        circleList.addFirst(3);
+        circleList.addFirst(4);
+        circleList.addFirst(85);
+        circleList.addFirst(5);
+        circleList.addFirst(12);
+        circleList.addFirst(19);
+
+        //Getting the size of the list
+        System.out.println(circleList.getSize());
+
+        //Removing elements 3, 12, 5
+        circleList.remove(3);
+        circleList.remove(12);
+        circleList.remove(5);
+
+        //Getting the size of the list
+        System.out.println(circleList.getSize());
+
+        //adding elements
+        circleList.addFirst(1);
+        circleList.addFirst(56);
+        circleList.addLast(39);
+
+        //finding a nonexistent element
+        circleList.find(100);
+
+        //removing nonexistent element
+        circleList.remove(100);
+
+        //finding first and last element
+        circleList.first();
+        circleList.last();
+
+        //removing all elements
+        for (int i = 0; i <= circleList.getSize(); i++)
+            circleList.removeFirst();
+
+
+        //Getting the size of the list
+        System.out.println(circleList.getSize());
+
+        //finding first and last element
+        circleList.first();
+        circleList.last();
+
+
+        //Getting the size of the list
+        System.out.println(circleList.getSize());
 
     }
 }
