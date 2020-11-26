@@ -2,13 +2,13 @@ package com.duala;
 
 import java.util.Objects;
 
-public class SinglyLinkedList {
+public class SinglyLinkedList<E> {
     private Node head = new Node();
     private int size = 0;
 
     /**
      * Returns the number of nodes in the singly linked list.
-     * @return int
+     * @return E
      */
     public int getSize() {
 
@@ -20,7 +20,7 @@ public class SinglyLinkedList {
      * @param data
      * @return newNode
      */
-    public Node addFirst(int data) {
+    public Node addFirst(E data) {
         Node newNode = new Node(data);
         newNode.next = head.next;
         head.next = newNode;
@@ -34,7 +34,7 @@ public class SinglyLinkedList {
      * @param data data to be included
      * @return newNode
      */
-    public Node addLast(int data){
+    public Node addLast(E data){
         Node last = last();
         Node newNode = new Node(data);
         last.setNext( newNode);
@@ -80,7 +80,7 @@ public class SinglyLinkedList {
     }
 
 
-    Node remove(int data){
+    Node remove(E data){
         Node current = first();
         Node previous = this.head;
 
@@ -106,7 +106,7 @@ public class SinglyLinkedList {
      * @param data
      * @return Node
      */
-    Node find(int data){
+    Node find(E data){
         Node current = first();
         while (current != null){
             current = current.next;
@@ -145,8 +145,8 @@ public class SinglyLinkedList {
 
 
 
-    static  class Node{
-        private int data;
+    static  class Node<E>{
+        private E data;
         private Node next;
 
         Node(){
@@ -154,11 +154,11 @@ public class SinglyLinkedList {
         }
 
 
-        Node (int data){
+        Node (E data){
             this.data = data;
         }
 
-        public void setData(int data) {
+        public void setData(E data) {
             this.data = data;
         }
 
@@ -166,7 +166,7 @@ public class SinglyLinkedList {
             this.next = next;
         }
 
-        public int getData() {
+        public E getData() {
             return data;
         }
 

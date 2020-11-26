@@ -26,7 +26,7 @@ public class Main {
 
         //Testing SinglyLinkedList
 
-        SinglyLinkedList singleList = new SinglyLinkedList();
+        SinglyLinkedList singleList = new <Integer>SinglyLinkedList();
 
         //Creating a full list
         singleList.addFirst(2);
