@@ -7,6 +7,11 @@ public class DoublyLinkedList<E> {
     private Node tail = new Node();
     private int size = 0;
 
+    public DoublyLinkedList(){
+        this.head.next = tail;
+        this.tail.previous = head;
+    }
+
 
 
     /**
@@ -162,7 +167,7 @@ public class DoublyLinkedList<E> {
      * @return Removed node that contained the entered data. null if none exists
      */
     public Node remove(E data){
-        Node node = find(data);
+        Node<E> node = find(data);
 
         if (node == null)
             return null;

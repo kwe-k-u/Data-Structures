@@ -141,5 +141,39 @@ public class Main {
         //Getting the size of the list
         System.out.println(circleList.getSize());
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Testing doubly linked list
+        DoublyLinkedList<String> doubleList = new DoublyLinkedList<String>();
+
+        //Removing from an empty list
+        doubleList.isEmpty();
+        doubleList.remove("Kweku");
+        doubleList.removeFirst();
+        doubleList.removelast();
+
+        //Adding to the list
+        doubleList.isEmpty();
+        doubleList.addFirst("The");
+        doubleList.addLast("Dog");
+        doubleList.addLast("fast");
+        doubleList.insertAt("runs",2);
+
+
     }
 }
