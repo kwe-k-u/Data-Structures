@@ -145,7 +145,7 @@ public class SinglyLinkedList<E> {
 
 
 
-    static  class Node<E>{
+      class Node<E>{
         private E data;
         private Node next;
 
